@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToolVerse - Free Online Tools</title>
+  <meta name="description" content="All-in-one free online tools to simplify your life. AI generators, calculators, daily tips, and more. No signup needed!">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #333; color: #fff; padding: 20px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
+    section { padding: 40px 20px; text-align: center; }
+    .tool-box { background: #f7f7f7; margin: 20px auto; padding: 20px; max-width: 800px; border-radius: 10px; }
+    .ad { background: #e2e2e2; padding: 10px; margin: 20px auto; max-width: 728px; text-align: center; }
+    .cta { background: #0057D9; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
+    .cta:hover { background: #003f9a; }
+    form input[type="email"] { padding: 10px; width: 250px; }
+    form button { padding: 10px 20px; }
+    input[type="number"] { padding: 8px; width: 150px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ToolVerse</h1>
+  <nav>
+    <a href="#tools">Tools</a>
+    <a href="#blog">Blog</a>
+    <a href="#subscribe">Subscribe</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <h2>All-in-One Free Online Tools</h2>
+  <p>Simple, fast, and powerful tools you can use daily.</p>
+  <a href="#tools" class="cta">Start Using Now</a>
+</section>
+
+<section id="ads-top" class="ad">
+  <!-- Google AdSense Code Block Placeholder -->
+  <p>[AdSense Top Banner]</p>
+</section>
+
+<section id="tools">
+  <h2>Popular Free Tools</h2>
+  <div class="tool-box">
+    <h3>AI Blog Post Generator</h3>
+    <p>Coming soon...</p>
+  </div>
+  <div class="tool-box">
+    <h3>Age Calculator</h3>
+    <p>Enter your birth year:</p>
+    <input type="number" id="birthYear" placeholder="e.g., 1995">
+    <p id="ageResult"></p>
+    <button onclick="calculateAge()">Calculate Age</button>
+  </div>
+  <div class="tool-box">
+    <h3>Motivational Quote of the Day</h3>
+    <blockquote id="quoteBox">"Believe in yourself!"</blockquote>
+    <button onclick="showQuote()">New Quote</button>
+  </div>
+</section>
+
+<section id="ads-mid" class="ad">
+  <!-- Google AdSense Mid Article Placeholder -->
+  <p>[AdSense In-Content Ad]</p>
+</section>
+
+<section id="blog">
+  <h2>Latest Blog Posts</h2>
+  <div class="tool-box">
+    <h3>Top 10 AI Tools in 2025</h3>
+    <p>Discover the best AI tools reshaping industries this year.</p>
+  </div>
+  <div class="tool-box">
+    <h3>Make Money with Online Utilities</h3>
+    <p>Turn free tools into a passive income stream.</p>
+  </div>
+</section>
+
+<section id="subscribe">
+  <h2>Subscribe for Daily Tools + Tips</h2>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<section id="faq">
+  <h2>FAQs</h2>
+  <div class="tool-box">
+    <p><strong>Do I need to register?</strong><br>No, all tools are free and no signup is needed.</p>
+    <p><strong>Can I share this site?</strong><br>Yes! Use the share buttons or copy the link.</p>
+  </div>
+</section>
+
+<section id="ads-bottom" class="ad">
+  <!-- Google AdSense Sticky Footer Placeholder -->
+  <p>[Sticky Footer Ad]</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 ToolVerse | <a href="#" style="color:#fff">Privacy Policy</a> | <a href="#" style="color:#fff">Contact</a></p>
+</footer>
+
+<script>
+  function calculateAge() {
+    const year = document.getElementById('birthYear').value;
+    if (!year) return alert("Please enter a birth year");
+    const age = new Date().getFullYear() - year;
+    document.getElementById('ageResult').innerText = `You are ${age} years old.`;
+  }
+
+  function showQuote() {
+    const quotes = [
+      "Believe in yourself!",
+      "Every day is a second chance.",
+      "Push harder than yesterday if you want a different tomorrow.",
+      "Don’t watch the clock; do what it does. Keep going.",
+      "The harder you work for something, the greater you’ll feel when you achieve it."
+    ];
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('quoteBox').innerText = `"${quote}"`;
+  }
+</script>
+
+</body>
+</html>
